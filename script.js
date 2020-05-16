@@ -41,6 +41,8 @@ const win = new Audio("sounds/win.mp3");
 //Main code, launched at document.ready
 $(document).ready(function(){
 
+    redirectIfAndroid();
+
     debugMessage();
 
     //Load the game
@@ -160,6 +162,16 @@ function generateCards(){
 //CLEAN: removes all children from grid-container
 function clean(){
     $( ".grid-container" ).empty();
+}
+
+//REDIRECT ANDROIDs to the Google Play Store to download the app
+function redirectIfAndroid(){
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1;
+    if(isAndroid) {
+        // Redirect to Play Store
+        window.location = 'https://play.google.com/store/apps/details?id=com.marco97pa.memory';
+    }
 }
 
 //DEBUG MESSAGE: Shows a console.log message to make debugging easier
