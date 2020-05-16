@@ -170,7 +170,7 @@ function redirectIfAndroid(){
     var isAndroid = ua.indexOf("android") > -1;
     if(isAndroid) {
         // Redirect to Play Store
-        window.location = 'https://play.google.com/store/apps/details?id=com.marco97pa.memory';
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.google.android.apps.maps';
     }
 }
 
