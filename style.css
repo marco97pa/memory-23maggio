@@ -1,0 +1,222 @@
+/*GENERAL STYLES (both mobile & desktop)*/
+ *{
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  body{
+    background: linear-gradient(#004c8c, #007ac1);
+    color: #fafafa;
+    margin: 0;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #d0d914;
+    font-weight: 700;
+  }
+  
+  .only_mobile{
+    display: none;
+  }
+  
+  #start_play {
+    background-color: #d0d914;
+    border: none;
+    color: #222222;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 50%;
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  
+  .button_wrapper{
+    width: 100%;
+    text-align:center;
+  }
+  
+  .curved-div {
+    position: relative;
+    background: #fafafa;
+    color: #0f8841;
+    text-align: center;
+    overflow: hidden;
+  }
+  svg {
+    display: block;
+  }
+  .curved-div h1{
+    margin: 0;
+    font-size: calc(16px + .5vw);
+  }
+  
+  #content{
+    padding: 0 16px;
+  }
+  
+  #content h1{
+    text-align: center;
+  }
+  
+  .bottom {
+    flex: 1;
+    padding-top: 50px;  /* svg separator height */
+  }
+  
+  .curved-div div h1{
+    display: inline-block;
+  }
+  
+  .logo{
+    width: 2em;
+    margin-top: 0.4em;
+  
+  }
+  .logo.right{
+    float: right;
+    margin-right: 1em;
+  }
+  .logo.left{
+    float: left;
+    margin-left: 1em;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  #overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+    z-index: 2; /* Stack order over other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  
+  #overlay div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%); /*Center aligned*/
+    text-align: center; /*Center aligned*/
+  }
+  
+  #overlay div p{
+    font-size: x-large;
+  }
+
+  /*MOBILE STYLES using media queries*/
+  @media screen and (max-width: 600px) {
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    .column {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    #presentation{
+      height: 100vh;
+    }
+  
+    .only_mobile{
+      display: block;
+    }
+  
+    #banner{
+      margin-left: -3vw;
+      margin-right: -3vw;
+    }
+  
+  }
+
+  /*GAME GRID*/
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 8px 8px;
+    background-image: url("images/backgrounds/falcone_borsellino.jpg"); /*Will be overridden by generateBackground()*/
+    background-repeat:no-repeat;
+    background-size: cover; 
+    background-position: center;
+    padding: 10px;
+    height: 90vh;
+    width: 100%;
+    min-width: calc(80vh * 0.6); /*Responsive*/
+    max-width: 90vh;
+  }
+  .grid-item {
+    background-color: rgba(219, 223, 216);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    font-size: 30px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out; /*3D Animation*/
+  }
+  .selected{
+    background-color: rgba(219, 223, 216);
+    transform: rotateY(360deg); /*3D Animation*/
+  }
+  .removed{
+    background-color: transparent;
+    background-image: none;
+    border: none;
+  }
+  /*Cards reveal (selected) styles*/
+  .selected[data-card='borsellino']{
+    background-image: url('images/cards/Borsellino.jpg')
+  }
+  .selected[data-card='catalano']{
+    background-image: url('images/cards/Catalano.jpg')
+  }
+  .selected[data-card='cosina']{
+    background-image: url('images/cards/Cosina.jpg')
+  }
+  .selected[data-card='dicillo']{
+    background-image: url('images/cards/Dicillo.jpg')
+  }
+  .selected[data-card='falcone']{
+    background-image: url('images/cards/Falcone.jpg')
+  }
+  .selected[data-card='li_muli']{
+    background-image: url('images/cards/Li_Muli.jpg')
+  }
+  .selected[data-card='loi']{
+    background-image: url('images/cards/Loi.jpg')
+  }
+  .selected[data-card='montinaro']{
+    background-image: url('images/cards/Montinaro.jpg')
+  }
+  .selected[data-card='morvillo']{
+    background-image: url('images/cards/Morvillo.jpg')
+  }
+  .selected[data-card='schifani']{
+    background-image: url('images/cards/Schifani.jpg')
+  }
+  .selected[data-card='traina']{
+    background-image: url('images/cards/Traina.jpg')
+  }

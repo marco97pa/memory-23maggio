@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="it" itemscope itemtype="https://schema.org/WebApplication">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memory 23 maggio</title>
+    <meta name="application-name" content="Memory 23 maggio">
+    <meta name="description" content="Un gioco per tutti in memoria delle vittime della mafia">
+    <meta name="keywords" content="falcone, mafia, legalità, maggio, game">
+    <meta name="author" content="Marco Fantauzzo">
+    <link rel="author" href="https://marco97pa.github.io/">
+    <link rel="icon" sizes="192x192" href="images/icon.png">
+    <link rel="apple-touch-icon" href="images/icon.png">
+    <meta property="og:title" content="Memory 23 maggio">
+    <meta property="og:image" content="https://marco97pa.github.io/memory-23maggio/images/icon.png">
+    <meta property="og:description" content="Un gioco per tutti in memoria delle vittime della mafia">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://marco97pa.github.io/memory-23maggio" />
+    <meta itemprop="name" content="Memory 23 maggio">
+    <meta itemprop="description" content="Un gioco per tutti in memoria delle vittime della mafia">
+    <meta itemprop="image" content="https://marco97pa.github.io/memory-23maggio/images/icon.png">
+    <meta itemprop="author" content="Marco Fantauzzo">
+    <meta itemprop="applicationCategory" content="Game">
+    <meta itemprop="operatingSystem" content="Any OS">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS (from Google Fonts (for web version) and from local Android assets (for offline wrapped app)) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="file:///android_asset/offline/font.css">
+    <!-- STYLE of the game -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- JQUERY (from JQuery CDN (for web version) and from local Android assets (for offline wrapped app)) -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="file:///android_asset/offline/jquery-3.5.1.min.js"></script>
+    <!-- SCRIPT of the game -->
+    <script src="script.js"></script>
+  </head>
+
+
+  <body>
+
+  <div id="overlay">
+    <div>
+      <h2>HAI VINTO</h2>
+      <p class="only_mobile">scorri in alto per una nuova partita</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="column" id="presentation">
+
+      <div id="banner">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 1440 100">
+            <path fill="#d42427" d="m0,0l120,10.7c120,10.3 360,32.3 600,42.6c240,10.7 480,10.7 600,10.7l120,0l0,96l-120,0c-120,0 -360,0 -600,0c-240,0 -480,0 -600,0l-120,0l0,-160z" id="svg_1"/>
+        </svg>
+        <div class="curved-div">
+          <div>
+            <a href="https://fse.it/"><img src="images/fse.png" class="logo left" /></a>
+            <h1>#PALERMOCHIAMAITALIA</h1>
+            <a href="http://www.fondazionefalcone.it/"><img src="images/fondazionefalcone.jpg" class="logo right" /></a>
+          </div>
+          <sup>2020</sup>
+        </div>
+      </div>
+
+      <div id="content">
+        <h1>Memory 23 maggio</h1>
+        <p>La <b>manifestazione</b> di quest'anno per commemorare le vittime delle stragi mafiose di Capaci e via D’Amelio è intitolata <b>“Il coraggio di ogni giorno”</b> ed è dedicata all’impegno di tutti i cittadini che in questi mesi di emergenza del Paese hanno operato per il bene della collettività<br><a href="http://www.fondazionefalcone.it/?p=5728">Scopri di più...</a></p>
+        <p>Lo scopo di questo gioco è abbinare le carte con lo stesso disegno, man mano che vengono scoperte le carte verrà rivelata un'immagine inerente alla lotta contro la mafia</p>
+        <p style="font-size: small;">Realizzato da <a href="http://marco97pa.github.io">Marco Fantauzzo</a>. Idea di <b>Riccardo Muratore</b> e <b>Daniele Di Pasquale</b>. Illustrazioni di <a href="https://www.ilgerme.it/un-segno-peligno-sulla-nave-della-legalita/">Luigi Fiore</a>. Icona di <b>Gioele Vitale</b>.</p>
+        
+        <div class="button_wrapper">
+          <button id="start_play" class="only_mobile">GIOCA!</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="grid-container">
+        <!-- Written by generateCards()-->
+      </div>
+    </div>
+
+  </div>
+
+  </body>
+
+</html>
