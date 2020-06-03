@@ -41,7 +41,7 @@ const win = new Audio("sounds/win.mp3");
 //Main code, launched at document.ready
 $(document).ready(function(){
 
-    //redirectIfAndroid(); FAST FIX FOR APP REMOVAL ON PLAY STORE: GOOGLE BOTS, I HATE YOU 
+    redirectIfAndroid(); 
 
     debugMessage();
 
